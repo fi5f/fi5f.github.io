@@ -1,91 +1,747 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>PPRO installer slideshow</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="سوقك تطبيق - Selin Giyim - معلومات الشركة وطرق التواصل">
+<title>سوقك تطبيق | Selin Giyim</title>
+
 <style>
+:root {
+  --main: #91677b;
+  --dark: #302a30;
+  --gray: #817780;
+  --bg: #faf8f9;
+  --soft: #f7eef2;
+  --line: #ece5e9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html {
-		background-color: #fff;
+  scroll-behavior: smooth;
 }
-* {box-sizing: border-box;}
+
 body {
-	margin:0px;}
-.mySlides {opacity: 0; position: absolute; transition: all 1s;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 445px;
-  position: relative;
-  margin: auto;
-  cursor: pointer;
+  margin: 0;
+  background: var(--bg);
+  color: var(--dark);
+  font-family: Tahoma, Arial, sans-serif;
+  line-height: 1.8;
 }
 
-/* Caption text */
-.text {
-  font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #fff;
-  font-weight: 450;
+.container {
+  width: 92%;
+  max-width: 850px;
+  margin: auto;
+}
+
+a {
+  color: var(--main);
+  text-decoration: none;
+}
+
+header {
+  background: white;
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.logo {
+  color: var(--main);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo small {
+  display: block;
+  color: var(--gray);
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.hero {
+  background: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.symbol {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background: var(--soft);
+  color: var(--main);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 6vw, 45px);
+  margin: 0;
+}
+
+.turkish {
+  direction: ltr;
+  color: var(--main);
+  font-weight: bold;
+}
+
+.hero .turkish {
+  font-size: 27px;
+  margin-top: 6px;
+}
+
+.subtitle {
+  color: var(--gray);
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.hero p {
+  max-width: 520px;
+  margin: 20px auto;
+  color: var(--gray);
   font-size: 15px;
-  letter-spacing: .3;
-  padding-left: 20px;
-  position: absolute;
-  bottom: 95px;
-  width: 30%;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.tags span {
+  background: var(--soft);
+  color: var(--main);
+  padding: 7px 15px;
+  border-radius: 25px;
+  font-size: 13px;
+}
+
+main {
+  padding: 32px 0;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin: 0;
+  padding: 14px 20px;
+  font-size: 19px;
+  background: var(--soft);
+  border-right: 4px solid var(--main);
+}
+
+.content {
+  padding: 10px 20px;
+}
+
+.names {
+  padding: 32px 15px;
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-	font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #f2f2f2;
+.name1 {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.name2 {
+  font-size: 27px;
+  color: var(--main);
+  font-weight: bold;
+  direction: ltr;
+}
+
+.name3 {
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+.name4 {
+  color: var(--gray);
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.name5 {
+  color: var(--main);
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  direction: ltr;
+  margin-top: 12px;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  margin: 20px auto;
+  background: var(--main);
+}
+
+.name-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 27px;
+}
+
+.name-grid div {
+  background: var(--soft);
+  color: var(--main);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.row:last-child {
+  border: none;
+}
+
+.label {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.status {
+  color: #278052;
+}
+
+.contact {
+  background: var(--main);
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.contact h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.contact .turkish {
+  color: white;
+  font-size: 19px;
+}
+
+.contact p {
+  font-size: 14px;
+  margin: 18px 0;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.buttons a {
+  background: white;
+  color: var(--main);
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.note {
+  color: var(--gray);
+  text-align: center;
   font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  margin: 25px auto;
 }
 
-.active {
-  background-color: #717171;
+footer {
+  background: white;
+  text-align: center;
+  padding: 30px 15px;
+  border-top: 1px solid var(--line);
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
+footer .arabic {
+  font-size: 25px;
+  font-weight: bold;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .7}
-  to {opacity: 1}
+footer .turkish {
+  font-size: 21px;
 }
 
-@keyframes fade {
-  from {opacity: .1}
-  to {opacity: 1}
+footer .small {
+  color: var(--gray);
+  font-size: 12px;
+  margin-top: 15px;
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+@media(max-width:600px) {
+  .hero {
+    padding: 45px 15px;
+  }
+
+  .hero .turkish {
+    font-size: 23px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .value {
+    text-align: right;
+  }
+
+  .name-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .name1 {
+    font-size: 28px;
+  }
+
+  .name2 {
+    font-size: 22px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons a {
+    display: block;
+  }
 }
 </style>
 </head>
+
 <body>
-<div class="slideshow-container" id="slideContainer" href="#">
 
-<div class="mySlides fade" style="opacity: 1; visibility: visible;">
-    <video class="videos" autoplay loop muted style="width: 445px; height: 239px;"><source src="images/01_creativity_for_all_445x239.mp4" style="width: 445px; height: 239px;"></video>
-    <div class="text" id="slideText1">Creativity for all.</div>
+<!-- HEADER -->
+
+<header>
+  <div class="container header-content">
+    <div class="logo">
+      سوقك تطبيق
+      <small>Selin Giyim</small>
+    </div>
+
+    <a href="#contact">تواصل معنا</a>
+  </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="symbol">S</div>
+
+  <h1>سوقك تطبيق</h1>
+
+  <div class="turkish">
+    Selin Giyim
+  </div>
+
+  <div class="subtitle">
+    سيلين للملابس
+  </div>
+
+  <p>
+    مرحبًا بكم في سوقك تطبيق.
+    تعرفوا على نشاطنا التجاري
+    وخدماتنا ومعلومات التواصل معنا.
+  </p>
+
+  <div class="tags">
+    <span>سوقك تطبيق</span>
+    <span>Selin Giyim</span>
+    <span>سيلين</span>
+    <span>SELİN</span>
+    <span>أزياء سيلين</span>
+    <span>سوقك</span>
+  </div>
+
+</section>
+
+<main class="container">
+
+<!-- COMPANY NAMES -->
+
+<section class="card">
+
+  <h2>اسم الشركة بالعربية والتركية</h2>
+
+  <div class="names">
+
+    <div class="name1">
+      سوقك تطبيق
+    </div>
+
+    <div class="name2">
+      Selin Giyim
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="name3">
+      سيلين للملابس
+    </div>
+
+    <div class="name4">
+      سيلين للأزياء النسائية
+    </div>
+
+    <div class="name5">
+      SELİN GİYİM
+    </div>
+
+    <div class="name4">
+      سيلين | Selin
+    </div>
+
+    <div class="name4">
+      سوقك تطبيق | SELİN
+    </div>
+
+    <div class="name4">
+      متجر سيلين للأزياء
+    </div>
+
+    <div class="name-grid">
+
+      <div>
+        سوقك تطبيق
+      </div>
+
+      <div dir="ltr">
+        Selin Giyim
+      </div>
+
+      <div>
+        أزياء سيلين
+      </div>
+
+      <div dir="ltr">
+        SELİN GİYİM
+      </div>
+
+    </div>
+
+    <p style="font-size:12px;color:#817780;margin-top:20px;">
+      الأسماء الإضافية صيغ ترجمة وعرض تسويقي
+      وليست أسماء قانونية مسجلة بصورة مستقلة.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- COMPANY INFORMATION -->
+
+<section class="card">
+
+  <h2>معلومات الشركة</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">الاسم التجاري</span>
+      <span class="value">
+        Selin Giyim
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الاسم بالعربية</span>
+      <span class="value">
+        سوقك تطبيق
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">رقم السجل التجاري</span>
+      <span class="value">
+        191899754
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الشكل القانوني</span>
+      <span class="value">
+        من الشركات الكبرى
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">حالة السجل حسب المستند</span>
+      <span class="value status">
+        نشط - Active
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ التسجيل</span>
+      <span class="value">
+        2026/06/20
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">استثمار أجنبي</span>
+      <span class="value">
+        نعم - Yes
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ انتهاء السجل</span>
+      <span class="value">
+        11/12/2028
+      </span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LICENSE INFORMATION -->
+
+<section class="card">
+
+  <h2>معلومات النشاط والترخيص</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">رقم الترخيص</span>
+      <span class="value">
+        L2876667
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تعريف الترخيص</span>
+      <span class="value">
+        LD-11
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">النشاط المذكور في المستند</span>
+      <span class="value">
+        خدمات الترويج والتسويق
+        على المواقع الإلكترونية
+        ووسائل التواصل الاجتماعي
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">مدة الترخيص</span>
+      <span class="value">
+        12 شهرًا
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الإصدار الأول</span>
+      <span class="value">
+        25/06/2026
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ الإصدار المذكور</span>
+      <span class="value">
+        2024/08/20
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ انتهاء الترخيص</span>
+      <span class="value">
+        11/12/2028
+      </span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT INFORMATION -->
+
+<section class="card">
+
+  <h2>معلومات التواصل</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">رقم الهاتف</span>
+      <span class="value">
+        <a href="tel:+966567855456">
+          +966567855456
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">البريد الإلكتروني</span>
+      <span class="value">
+        <a href="mailto:admin@fi5f.github.io">
+          admin@fi5f.github.io
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الموقع الإلكتروني</span>
+      <span class="value">
+        <a href="https://fi5f.github.io"
+           target="_blank"
+           rel="noopener noreferrer">
+          fi5f.github.io
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">العنوان</span>
+      <span class="value">
+        طريق الملك سلمان،
+        العليا، الخرج،
+        11487،
+        المملكة العربية السعودية
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الرمز البريدي</span>
+      <span class="value">
+        11487
+      </span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <h2>تواصل مع سوقك تطبيق</h2>
+
+  <div class="turkish">
+    Selin Giyim
+  </div>
+
+  <p>
+    يسعدنا استقبال استفساراتكم
+    والتواصل معكم.
+  </p>
+
+  <div class="buttons">
+
+    <a href="tel:+966567855456">
+      اتصال هاتفي
+    </a>
+
+    <a href="mailto:admin@fi5f.github.io">
+      البريد الإلكتروني
+    </a>
+
+    <a href="https://wa.me/966567855456"
+       target="_blank"
+       rel="noopener noreferrer">
+      واتساب
+    </a>
+
+    <a href="https://fi5f.github.io"
+       target="_blank"
+       rel="noopener noreferrer">
+      زيارة الموقع
+    </a>
+
+  </div>
+
+</section>
+
+<div class="note">
+  صفحة تعريفية تعتمد على المعلومات الواردة
+  في المستند المرفق دون تحقق مستقل.
+  ليست شهادة حكومية أو وسيلة رسمية للتحقق
+  من صحة التسجيل أو الترخيص.
 </div>
 
-</div>
+</main>
 
-<script type="text/javascript" src="lib/jquery.min.js"></script>
-<script type="text/javascript" src="carousel.js"></script>
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="arabic">
+    سوقك تطبيق
+  </div>
+
+  <div class="turkish">
+    Selin Giyim
+  </div>
+
+  <div class="small">
+    سيلين للملابس
+    <br>
+    SELİN GİYİM
+    <br>
+    © 2026 Selin Giyim
+    <br>
+    fi5f.github.io
+    <br>
+    Al-Kharj, Saudi Arabia - 11487
+  </div>
+
+</footer>
+
 </body>
 </html>
